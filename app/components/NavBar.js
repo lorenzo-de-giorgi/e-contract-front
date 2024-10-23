@@ -8,8 +8,8 @@ export default function NavBar(){
                 <h1>Gestione Contratti</h1>
             </div>
             <div>
-                <Link href="" className="me-3 btn btn-dark">Accedi</Link>
-                <Link href="" className="btn btn-outline-dark">Registrati</Link>
+                <Link href="/login" className="me-3 btn btn-dark">Accedi</Link>
+                <Link href="/register" className="btn btn-outline-dark">Registrati</Link>
             </div>
         </nav>
     )

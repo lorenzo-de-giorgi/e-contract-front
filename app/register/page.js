@@ -29,7 +29,7 @@ export default function RegisterPage() {
         console.log("Dati Utente: " + formData);
     
         try {
-            const response = await axios.post('http://127.0.0.1:3000/users', { user: formData });
+            const response = await axios.post('http://127.0.0.1:3000/api/v1/register', { user: formData });
             console.log('User created successfully:', response.data);
         } catch (error) {
             console.log('Error:', error);
@@ -61,10 +61,10 @@ export default function RegisterPage() {
 
                 <div className="row mb-3">
                     <div className="col">
-                        <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder="Name" required className="form-control p-2" minLength={3}/>
+                        <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder="Nome" required className="form-control p-2" minLength={3}/>
                     </div>
                     <div className="col">
-                        <input value={surname} onChange={(e) => setSurname(e.target.value)} type="text" placeholder="Surname" required className="form-control p-2" minLength={3}/>
+                        <input value={surname} onChange={(e) => setSurname(e.target.value)} type="text" placeholder="Cognome" required className="form-control p-2" minLength={3}/>
                     </div>
                 </div>
 
